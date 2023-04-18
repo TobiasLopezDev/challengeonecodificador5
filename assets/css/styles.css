@@ -1,0 +1,289 @@
+body {
+  background-color: #e5e5e5;
+  font-family: "Inter", sans-serif;
+  overflow: hidden !important;
+}
+
+.logo {
+  margin: 20px 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div.encrypt {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+}
+
+div.encrypt textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  max-height: 500px;
+  background-color: transparent;
+  color: #0a3871;
+
+  margin: 20px;
+
+  font-size: 32px;
+
+  scrollbar-color: #0a3871 #fff;
+  scrollbar-width: thin;
+}
+
+::-moz-placeholder,
+::placeholder {
+  color: #0a3871;
+  opacity: 1;
+}
+
+div.encrypt span {
+  display: block;
+  width: 100%;
+  margin: 20px;
+}
+
+div.encrypt .actions {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div.encrypt .actions span {
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 40%;
+  margin: 1%;
+  padding: 20px;
+
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+button.fill {
+  background-color: #0a3871;
+  color: #fff;
+  border: 2px solid #0a3871;
+}
+
+button.fill:hover {
+  background-color: transparent;
+  color: #0a3871;
+  border: 2px solid #0a3871;
+}
+
+button.border {
+  background-color: transparent;
+  color: #0a3871;
+  border: 2px solid #0a3871;
+}
+
+button.border:hover {
+  background-color: #0a3871;
+  color: #fff;
+  border: 2px solid #0a3871;
+}
+
+div.result {
+  position: absolute;
+  right: 20px;
+  margin: auto 20px;
+  top: 0;
+  bottom: -20px;
+  margin-bottom: 0;
+  border-radius: 25px 25px 0 0;
+  background-color: #fff;
+
+  width: 30%;
+  min-width: 350px;
+  max-width: 500px;
+
+  height: 700px;
+
+  transition: all ease-in-out 500ms;
+}
+
+div.close {
+  margin-bottom: calc(80px - 700px);
+}
+
+span.close-popup {
+  cursor: pointer;
+  font-weight: 900;
+  display: block;
+  text-align: right;
+
+  padding: 20px;
+  border: 0 solid #e5e5e5;
+  border-width: 0 0 1px 0;
+}
+
+div.result p {
+  scrollbar-color: #0a3871 #fff;
+  scrollbar-width: thin;
+  height: auto;
+  display: block;
+  padding: 10px 20px 0 20px;
+
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+
+  max-height: 500px;
+  min-height: 90%;
+}
+div.result button {
+  margin-top: 20px;
+
+  width: 90%;
+  margin: 20px;
+}
+
+div.result .no-result {
+  height: 100%;
+  padding: 20px;
+}
+
+div.result .no-result img {
+  width: 100%;
+  max-width: 330px;
+  padding: 20px;
+}
+
+div.result .no-result h2 {
+  width: 100%;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: center;
+}
+
+div.result .no-result p {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.notice {
+  width: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 15px 15px;
+  margin: 30px auto;
+  border-radius: 25px;
+  height: 20px;
+  min-height: 50px;
+  z-index: 9999;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all ease-in-out 500ms;
+}
+
+.notice-hide {
+  transform: translateX(200%);
+  opacity: 0;
+}
+
+.success {
+  background: #3eb54e87;
+  border: 1px solid #3eb54e;
+}
+
+.warning {
+  background: #b5b53e87;
+  border: 1px solid #b5a53e;
+}
+
+.error {
+  background: #b53e3e87;
+  border: 1px solid #b53e3e;
+}
+
+#close-notice {
+  text-align: right;
+  display: block;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 900px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
+  main{
+    display: block;
+    height: auto;
+  }
+
+  div.encrypt {
+    width: 90%;
+    height: auto;
+  }
+
+  div.encrypt textarea {
+    margin: 0px;
+    max-height: 70vh;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  div.result {
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+
+    position: unset;
+    border-radius: 25px;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  div.decrypt {
+    padding: 20px;
+  }
+  #trigger-popup{
+    display: none;
+  }
+  div.result .no-result img {
+    display: none;
+  }
+}

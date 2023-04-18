@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <img src="./public/images/Logo.png" alt="Encriptador_logo">
+      </div>
+    </header>
+
+    <main>
+      <div class="encrypt">
+        <form>
+          <textarea
+            name="text_encrypt"
+            id="text_encrypt"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+          <div class="actions">
+            <span><i>!</i> Solo letras minisculas y sin acentos</span>
+            <button class="fill" id="encryptButton">Encriptar</button>
+            <button class="border" id="decryptButton">Desencriptar</button>
+          </div>
+        </form>
+      </div>
+      <div class="result close">
+        <span id="trigger-popup" class="close-popup">Ver resultados</span>
+        <div class="no-result" id="no-result">
+          <img src="./public/images/no-result.png" alt="Sin Resultados" >
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div class="decrypt ">
+          <p  class="d-none" id="result"></p>
+          <button class="border d-none" id="copyButton">Copiar</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="notice notice-hide">
+      <span id="close-notice">X</span>
+      <p class="alert" id="alert"></p>
+    </div>
+  </body>
+  <script src="./assets/js/encrypt.js"></script>
+</html>
